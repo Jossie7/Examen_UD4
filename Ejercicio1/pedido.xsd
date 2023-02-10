@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="empresa">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="1" maxOccurs="unbounded" ref="sucursales" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+    <xs:element name="sucursales">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="1" maxOccurs="unbounded" ref="sucursal" />
+			</xs:sequence>
+            <xs:attribute name="pais" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="sucursal">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="nombre" />
+				<xs:element minOccurs="1" maxOccurs="unbounded" ref="zonaExposicion" />
+                <xs:element minOccurs="1" maxOccurs="unbounded" ref="zonaGestion" />
+                <xs:element minOccurs="1" maxOccurs="unbounded" ref="pedido" />
+			</xs:sequence>
+			<xs:attribute name="codigo" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="zonaExposicion">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ubicacion" />
+				<xs:element ref="Recibe" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+  <xs:element name="zonaGestion">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ubicación" />
+				<xs:element ref="recibe" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+    <xs:element name="pedido">
+		<xs:complexType>
+			<xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="unbounded" ref="direccionesEnvio" />
+				<xs:element ref="trabajadorEncargado" />
+				<xs:element ref="fecha" />
+                <xs:element ref="Observaciones" />
+                <xs:element minOccurs="1" maxOccurs="unbounded" ref="articulos" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+    <xs:element name="direccionesEnvio">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="direccion1" />
+				<xs:element ref="direccion2" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+    <xs:element name="articulos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="unidadesPedidas" />
+				<xs:element ref="precio" />
+                <xs:element ref="observaciones" />
+                <xs:element ref="plazoRevision" />
+			</xs:sequence>
+            <xs:attribute name="Codigo" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="nombre" type="xs:string" />
+	<xs:element name="ubicacion" type="xs:string" />
+	<xs:element name="Recibe" type="xs:string" />
+    <xs:element name="ubicación" type="xs:string" />
+	<xs:element name="recibe" type="xs:string" />
+	<xs:element name="direccion1" type="xs:string" />
+	<xs:element name="direccion2" type="xs:string" />
+	<xs:element name="trabajadorEncargado" type="xs:string" />
+	<xs:element name="fecha" type="xs:date" />
+  <xs:element name="Observaciones" type="xs:string" />
+  <xs:element name="unidadesPedidas" type="xs:integer" />
+  <xs:element name="precio" type="xs:decimal" />
+  <xs:element name="plazoRevision" type="xs:integer" />
+  <xs:element name="observaciones" type="xs:string" />
+
+
+</xs:schema>

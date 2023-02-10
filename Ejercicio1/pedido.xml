@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE empresa SYSTEM "pedido.dtd">
+<empresa>
+    <sucursales pais="España">
+        <sucursal codigo = "A1234567">
+            <nombre>central</nombre>
+            <zonaExposicion>
+                <ubicacion> </ubicacion>
+                <Recibe> artículos </Recibe>
+            </zonaExposicion>
+            <zonaGestion>
+                <ubicación> </ubicación>
+                <recibe> albarán y pago</recibe>
+            </zonaGestion>
+            <pedido>
+                <direccionesEnvio>
+                    <direccion1> </direccion1>
+                    <direccion2> </direccion2>
+                </direccionesEnvio>
+                <trabajadorEncargado> Pepito Perez</trabajadorEncargado>
+                <fecha> 2021-02-02 </fecha>
+                <Observaciones> urgente </Observaciones>
+                <articulos Código="ABC-123">
+                    <unidadesPedidas> 10</unidadesPedidas>
+                    <precio> 10.63 </precio>
+                    <observaciones> En buen estado </observaciones>
+                    <plazoRevision> 10 </plazoRevision>
+                </articulos>
+            </pedido>
+    </sucursal>
+    </sucursales>
+</empresa>

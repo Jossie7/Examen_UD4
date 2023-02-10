@@ -1,0 +1,25 @@
+<!ELEMENT empresa (sucursales*)>
+<!ELEMENT sucursales (sucursal*)>
+<!ATTLIST sucursales pais CDATA #REQUIRED>
+<!ELEMENT sucursal (nombre,zonaExposicion*, zonaGestion*,pedido*)>
+<!ATTLIST sucursal codigo CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT zonaExposicion (ubicacion,Recibe)>
+<!ELEMENT ubicacion (#PCDATA)>
+<!ELEMENT Recibe (#PCDATA)>
+<!ELEMENT zonaGestion (ubicación,recibe)>
+<!ELEMENT ubicación (#PCDATA)>
+<!ELEMENT recibe (#PCDATA)>
+<!ELEMENT pedido (direccionesEnvio*,trabajadorEncargado,fecha,Observaciones,articulos*)>
+<!ELEMENT direccionesEnvio (direccion1,direccion2)>
+<!ELEMENT direccion1 (#PCDATA)>
+<!ELEMENT direccion2 (#PCDATA)>
+<!ELEMENT trabajadorEncargado (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT Observaciones (#PCDATA)>
+<!ELEMENT articulos (unidadesPedidas,precio, observaciones,plazoRevision)>
+<!ELEMENT unidadesPedidas (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT observaciones (#PCDATA)>
+<!ELEMENT plazoRevision (#PCDATA)>
+<!ATTLIST articulos Código CDATA #REQUIRED>
