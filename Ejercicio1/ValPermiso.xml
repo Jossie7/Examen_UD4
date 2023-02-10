@@ -20,7 +20,7 @@ xsi:noNamespaceSchemaLocation="pedido.xsd">
             <trabajadorEncargado> Pepito Perez</trabajadorEncargado>
             <fecha> 2021-02-02 </fecha>
             <Observaciones> urgente </Observaciones>
-            <articulos codigo="CDJ-122">
+            <articulos Codigo="CDJ-122">
                 <unidadesPedidas> 10</unidadesPedidas>
                 <precio> 10.63 </precio>
                 <observaciones> En buen estado </observaciones>

@@ -26,6 +26,12 @@
 			<xs:attribute name="codigo" type="xs:string" use="required" />
 		</xs:complexType>
 	</xs:element>
+    <xs:simpleType name="codigo">
+        <xs:restriction base="xs:string">
+          <xs:length value="8"/>
+          <xs:pattern value="[A-Z].*"/>
+        </xs:restriction>
+      </xs:simpleType>
 	<xs:element name="zonaExposicion">
 		<xs:complexType>
 			<xs:sequence>
@@ -74,6 +80,23 @@
             <xs:attribute name="Codigo" type="xs:string" use="required" />
 		</xs:complexType>
 	</xs:element>
+    <xs:simpleType name="Codigo">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[A-Za-z]{3}-([0-9]{3})"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Observaciones">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="urgente"/>
+          <xs:enumeration value="incompleto"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="plazoRevision">
+        <xs:restriction base="xs:integer">
+          <xs:maxExclusive value="30"/>
+          <xs:minExclusive value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
 
 	<xs:element name="nombre" type="xs:string" />
 	<xs:element name="ubicacion" type="xs:string" />
